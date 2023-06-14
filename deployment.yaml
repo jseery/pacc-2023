@@ -1,0 +1,33 @@
+deployments:
+- name: dep_105_test_2
+  entrypoint: 105/weatherflow.py:fetch_weather
+  version: null
+  tags: []
+  description: null
+  schedule:
+    interval: 60
+  flow_name: null
+  
+  parameters:
+    lat: 38.9
+    lon: -77.0
+  work_pool:
+    name: test_pool_1
+    work_queue_name: null
+    job_variables: {}
+- name: dep_105_test
+  entrypoint: 105/weatherflow.py:fetch_weather
+  version: null
+  tags: []
+  description: null
+  schedule:
+    interval: 30
+  flow_name: null
+  
+  parameters:
+    lat: 40.0
+    lon: -80.0
+  work_pool:
+    name: test_pool_1
+    work_queue_name: null
+    job_variables: {}
