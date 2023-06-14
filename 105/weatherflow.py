@@ -7,7 +7,7 @@ from prefect.artifacts import create_markdown_artifact
 def mark_it_down(temp):
     markdown_report = f"""# Weather Report
     
-## Recent weather (branch is test-deploy-change)
+## Recent weather (branch is test-deploy-change, with a 2nd commit)
 
 | Time        | Temperature |
 |:--------------|-------:|
