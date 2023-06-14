@@ -20,6 +20,11 @@ def mark_it_down(temp):
         description="Very scientific weather report",
     )
 
+@task
+def im_a_new_task():
+    print("I'm a new task!")
+    return
+
 
 @flow
 def fetch_weather(lat: float, lon: float):
@@ -29,6 +34,7 @@ def fetch_weather(lat: float, lon: float):
         params=dict(latitude=lat, longitude=lon, hourly="temperature_2m"),
     )
     most_recent_temp = float(weather.json()["hourly"]["temperature_2m"][0])
+    im_a_new_task()
     mark_it_down(most_recent_temp)
 
 
